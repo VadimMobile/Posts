@@ -1,38 +1,46 @@
+data class Likes(val count: Int = 0)
 data class Post(
     val id: Int, val authorId: Int, val authorName: String, val content: String, val published: Long,
-    val likes: Int, val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean, val isPinned: Boolean
+    val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean, val isPinned: Boolean,
 )
 
-object WallService{
+object WallService {
     private var posts = emptyArray<Post>()
     private var postId = 0
-    fun add (post: Post): Post{
-        for ((index, post) in posts.withIndex())
-        posts += post
-        postId++
+
+    fun clear() {
+        posts = emptyArray()
+    }
+
+    fun add(post: Post): Post {
+        posts += post.copy(id = ++postId, likes = post.likes.copy())
         return posts.last()
     }
 
-    fun printPosts(){
+    fun printPosts() {
         for (post in posts)
-            print(postId)
-        println(posts)
+            println(post)
     }
-fun update(post: Post): Boolean {
-    if (postId == post.id)
-        return true
-    else
-    return false
+
+    fun update(newPost: Post): Boolean {
+        for ((index, post) in posts.withIndex()) {
+            if (posts[index].id == newPost.id) {
+                posts[index] = newPost.copy(likes = post.likes.copy())
+                return true
+            }
+        }
+        return false
+    }
 }
-    }
+
 fun main() {
-    val post = Post(
-        1, 2, "name", "content", 3,
-        543, true, true, true, true
-    )
-    val liked = post.copy(likes = post.likes + 10)
-    val (_,_,_,_,_,likes) = post
-    println(likes)
-    println(liked)
-    println(printPosts)
+    val likes = Likes(100)
+    WallService.add(Post(1, 3,"name", "content", 254, likes = likes ,
+        true, true, true, true))
+    WallService.add(Post(1, 3,"name", "content2", 254, likes = likes ,
+        true, true, true, true))
+    WallService.printPosts()
+    println(WallService.update(Post(1, 3,"name", "content3", 254, likes = likes ,
+        true, true, true, true)))
+    WallService.printPosts()
 }
