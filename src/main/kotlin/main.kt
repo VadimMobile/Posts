@@ -1,6 +1,6 @@
 data class Likes(val count: Int = 0)
 data class Post(
-    val id: Int, val authorId: Int, val authorName: String, val content: String, val published: Long,
+    val id: Int?, val authorId: Int?, val authorName: String?, val content: String?, val published: Long?,
     val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean, val isPinned: Boolean,
 )
 

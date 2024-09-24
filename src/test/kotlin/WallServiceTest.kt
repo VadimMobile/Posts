@@ -13,11 +13,11 @@ class WallServiceTest {
 
     fun add() {
         val likes = Likes(100)
-        val post = Post(0, 3,"name", "content", 254, likes = likes ,
+        val post = Post(null, 3,"name", "content", 254, likes = likes ,
             true, true, true, true)
         val result = Post(1, 3,"name", "content", 254, likes = likes ,
             true, true, true, true)
-        assertNotEquals(0,result)
+        assertNotEquals(null,result)
     }
     @Test
     fun updateTrue(){

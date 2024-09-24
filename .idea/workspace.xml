@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="The problem with the tests">
+    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="DELETE&#10;test {&#10;    useJUnitPlatform()&#10;}">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,12 +50,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;VadimMobile&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
+    {
+      "state": "OPEN",
+      "assignee": "VadimMobile",
+      "author": "VadimMobile",
+      "label": "bug"
+    },
+    {
+      "state": "OPEN",
+      "assignee": "VadimMobile",
+      "author": "VadimMobile"
+    },
+    {
+      "state": "OPEN",
+      "author": "VadimMobile",
+      "label": "enhancement"
+    }
+  ],
+  "lastFilter": {
+    "state": "OPEN",
+    "author": "VadimMobile",
+    "label": "enhancement"
   }
-}</component>
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:VadimMobile/Posts.git&quot;,
@@ -104,7 +123,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.WallServiceTest.updateTrue">
+  <component name="RunManager" selected="Gradle.WallServiceTest.updateFalse">
     <configuration name="Posts [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -225,10 +244,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.WallServiceTest.updateFalse" />
         <item itemvalue="Gradle.WallServiceTest.updateTrue" />
         <item itemvalue="Gradle.WallServiceTest.add" />
         <item itemvalue="Gradle.WallServiceTest" />
-        <item itemvalue="Gradle.WallServiceTest.updateFalse" />
         <item itemvalue="Gradle.Posts [test]" />
       </list>
     </recent_temporary>
@@ -274,12 +293,29 @@
       <option name="project" value="LOCAL" />
       <updated>1727170312820</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="DELETE&#10;test {&#10;    useJUnitPlatform()&#10;}">
+      <option name="closed" value="true" />
+      <created>1727173244710</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727173244710</updated>
+    </task>
+    <task id="LOCAL-00006" summary="DELETE&#10;test {&#10;    useJUnitPlatform()&#10;}">
+      <option name="closed" value="true" />
+      <created>1727173347430</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727173347430</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
     <MESSAGE value="The problem with the tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="The problem with the tests" />
+    <MESSAGE value="DELETE&#10;test {&#10;    useJUnitPlatform()&#10;}" />
+    <option name="LAST_COMMIT_MESSAGE" value="DELETE&#10;test {&#10;    useJUnitPlatform()&#10;}" />
   </component>
 </project>
