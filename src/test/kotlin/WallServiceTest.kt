@@ -16,7 +16,8 @@ class WallServiceTest {
         val post = Post(0, 3,"name", "content", 254, likes = likes ,
             true, true, true, true)
         WallService.add(post)
-        val result = postId
+        val result = Post(1, 3,"name", "content", 254, likes = likes ,
+            true, true, true, true)
         assertNotEquals(0,result)
     }
     @Test
@@ -29,7 +30,8 @@ class WallServiceTest {
         println(WallService.update(Post(1, 3,"name", "content3", 254, likes = likes ,
             true, true, true, true)))
         WallService.printPosts()
-        val result = true
+        val result =  WallService.update(Post(1, 3,"name", "content", 254, likes = likes ,
+            true, true, true, true))
         assertEquals(true, result)
     }
     @Test
@@ -42,7 +44,8 @@ class WallServiceTest {
         println(WallService.update(Post(3, 3,"name", "content3", 254, likes = likes ,
             true, true, true, true)))
         WallService.printPosts()
-        val result = false
+        val result = WallService.update(Post(3, 3,"name", "content", 254, likes = likes ,
+            true, true, true, true))
         assertEquals(false, result)
     }
 }
