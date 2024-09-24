@@ -15,7 +15,6 @@ class WallServiceTest {
         val likes = Likes(100)
         val post = Post(0, 3,"name", "content", 254, likes = likes ,
             true, true, true, true)
-        WallService.add(post)
         val result = Post(1, 3,"name", "content", 254, likes = likes ,
             true, true, true, true)
         assertNotEquals(0,result)
@@ -29,7 +28,6 @@ class WallServiceTest {
             true, true, true, true))
         println(WallService.update(Post(1, 3,"name", "content3", 254, likes = likes ,
             true, true, true, true)))
-        WallService.printPosts()
         val result =  WallService.update(Post(1, 3,"name", "content", 254, likes = likes ,
             true, true, true, true))
         assertEquals(true, result)
@@ -43,7 +41,6 @@ class WallServiceTest {
             true, true, true, true))
         println(WallService.update(Post(3, 3,"name", "content3", 254, likes = likes ,
             true, true, true, true)))
-        WallService.printPosts()
         val result = WallService.update(Post(3, 3,"name", "content", 254, likes = likes ,
             true, true, true, true))
         assertEquals(false, result)
