@@ -8,20 +8,20 @@ class WallServiceTest {
     fun clearBeforeTest() {
         WallService.clear()
     }
-    private var postId = 0
+    val likes = Likes(100)
     @Test
 
     fun add() {
-        val likes = Likes(100)
         val post = Post(null, 3,"name", "content", 254, likes = likes ,
             true, true, true, true)
-        val result = Post(1, 3,"name", "content", 254, likes = likes ,
+        WallService.add(Post(1, 3,"name", "content2", 254, likes = likes ,
+            true, true, true, true))
+        val result = Post(1, 3,"name", "content2", 254, likes = likes ,
             true, true, true, true)
         assertNotEquals(null,result)
     }
     @Test
     fun updateTrue(){
-        val likes = Likes(100)
         WallService.add(Post(1, 3,"name", "content", 254, likes = likes ,
             true, true, true, true))
         WallService.add(Post(2, 3,"name", "content2", 254, likes = likes ,
@@ -30,11 +30,10 @@ class WallServiceTest {
             true, true, true, true)))
         val result =  WallService.update(Post(1, 3,"name", "content", 254, likes = likes ,
             true, true, true, true))
-        assertEquals(true, result)
+        assertTrue(result)
     }
     @Test
     fun updateFalse(){
-        val likes = Likes(100)
         WallService.add(Post(1, 3,"name", "content", 254, likes = likes ,
             true, true, true, true))
         WallService.add(Post(2, 3,"name", "content2", 254, likes = likes ,
@@ -43,6 +42,6 @@ class WallServiceTest {
             true, true, true, true)))
         val result = WallService.update(Post(3, 3,"name", "content", 254, likes = likes ,
             true, true, true, true))
-        assertEquals(false, result)
+        assertFalse(result)
     }
 }
