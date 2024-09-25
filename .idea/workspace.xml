@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="added Nullable-properties">
+    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="The problem with the tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,33 +46,38 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;history&quot;: [
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "history": [
     {
-      &quot;state&quot;: &quot;OPEN&quot;,
-      &quot;assignee&quot;: &quot;VadimMobile&quot;,
-      &quot;author&quot;: &quot;VadimMobile&quot;,
-      &quot;label&quot;: &quot;bug&quot;
+      "state": "OPEN",
+      "assignee": "VadimMobile",
+      "author": "VadimMobile",
+      "label": "bug"
     },
     {
-      &quot;state&quot;: &quot;OPEN&quot;,
-      &quot;assignee&quot;: &quot;VadimMobile&quot;,
-      &quot;author&quot;: &quot;VadimMobile&quot;
+      "state": "OPEN",
+      "assignee": "VadimMobile",
+      "author": "VadimMobile"
     },
     {
-      &quot;state&quot;: &quot;OPEN&quot;,
-      &quot;author&quot;: &quot;VadimMobile&quot;,
-      &quot;label&quot;: &quot;enhancement&quot;
+      "state": "OPEN",
+      "author": "VadimMobile",
+      "label": "enhancement"
+    },
+    {
+      "author": "VadimMobile",
+      "label": "enhancement"
     }
   ],
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;author&quot;: &quot;VadimMobile&quot;,
-    &quot;label&quot;: &quot;enhancement&quot;
-  }
-}</component>
+  "lastFilter": {}
+}]]></component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:VadimMobile/Posts.git&quot;,
@@ -103,7 +107,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Nullable",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -317,15 +321,34 @@
       <option name="project" value="LOCAL" />
       <updated>1727182899275</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="The problem with the tests">
+      <option name="closed" value="true" />
+      <created>1727262108963</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727262108963</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init commit" />
-    <MESSAGE value="The problem with the tests" />
     <MESSAGE value="DELETE&#10;test {&#10;    useJUnitPlatform()&#10;}" />
     <MESSAGE value="added Nullable-properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Nullable-properties" />
+    <MESSAGE value="The problem with the tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="The problem with the tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
