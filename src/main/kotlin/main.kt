@@ -1,7 +1,8 @@
 data class Likes(val count: Int = 0)
 data class Post(
     val id: Int?, val authorId: Int?, val authorName: String?, val content: String?, val published: Long?,
-    val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean, val isPinned: Boolean,
+    val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean,
+    val isPinned: Boolean,
 )
 
 object WallService {
@@ -10,6 +11,7 @@ object WallService {
 
     fun clear() {
         posts = emptyArray()
+        postId = 0
     }
 
     fun add(post: Post): Post {
@@ -32,6 +34,59 @@ object WallService {
         return false
     }
 }
+
+abstract class Attachment (val type: String)
+
+
+class Audio
+abstract class AudioAttachment(val audio: Audio) : Attachment("audio"){
+   abstract val id: Int
+    abstract val owner_id: Int
+    abstract val artist: String
+    abstract val title: String
+    abstract val duration: Int
+}
+
+class Photo
+abstract class PhotoAttachment(val photo: Photo) : Attachment("photo"){
+    abstract val id: Int
+    abstract val album_id: Int
+    abstract val owner_id: Int
+    abstract val user_id: Int
+    abstract val text: String
+
+}
+
+class Video
+abstract class VideoAttachment(val video: Video) : Attachment("video"){
+    abstract val id: Int
+    abstract val owner_id: Int
+    abstract val description: String
+    abstract val title: String
+    abstract val views: Int
+
+}
+
+class Doc
+abstract class DocAttachment(val doc: Doc) : Attachment("doc"){
+    abstract val id: Int
+    abstract val owner_id: Int
+    abstract val title: String
+    abstract val size: Int
+    abstract val ext: String
+
+}
+
+class Linc
+abstract class LincAttachment(val linc: Linc) : Attachment("linc"){
+    abstract val url: String
+    abstract val title: String
+    abstract val description: String
+    abstract val caption: String
+    abstract val preview_page: String
+
+}
+
 
 fun main() {
     val likes = Likes(100)

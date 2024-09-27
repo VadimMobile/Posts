@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="The problem with the tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,31 +54,31 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "history": [
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
     {
-      "state": "OPEN",
-      "assignee": "VadimMobile",
-      "author": "VadimMobile",
-      "label": "bug"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;VadimMobile&quot;,
+      &quot;author&quot;: &quot;VadimMobile&quot;,
+      &quot;label&quot;: &quot;bug&quot;
     },
     {
-      "state": "OPEN",
-      "assignee": "VadimMobile",
-      "author": "VadimMobile"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;assignee&quot;: &quot;VadimMobile&quot;,
+      &quot;author&quot;: &quot;VadimMobile&quot;
     },
     {
-      "state": "OPEN",
-      "author": "VadimMobile",
-      "label": "enhancement"
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;author&quot;: &quot;VadimMobile&quot;,
+      &quot;label&quot;: &quot;enhancement&quot;
     },
     {
-      "author": "VadimMobile",
-      "label": "enhancement"
+      &quot;author&quot;: &quot;VadimMobile&quot;,
+      &quot;label&quot;: &quot;enhancement&quot;
     }
   ],
-  "lastFilter": {}
-}]]></component>
+  &quot;lastFilter&quot;: {}
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:VadimMobile/Posts.git&quot;,
@@ -107,7 +108,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "Nullable",
+    "git-widget-placeholder": "#1 on Nullable",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
