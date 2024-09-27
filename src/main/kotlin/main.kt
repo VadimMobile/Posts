@@ -10,6 +10,7 @@ object WallService {
 
     fun clear() {
         posts = emptyArray()
+        postId = 0
     }
 
     fun add(post: Post): Post {
@@ -32,6 +33,25 @@ object WallService {
         return false
     }
 }
+abstract class Attachment () {
+
+}
+
+class Audio
+class AudioAttachment(val audio: Audio) : Attachment()
+
+class Photo
+class PhotoAttachment(val audio: Photo) : Attachment()
+
+class Video
+class VideoAttachment(val audio: Video) : Attachment()
+
+class Doc
+class DocAttachment(val audio: Doc) : Attachment()
+
+class Linc
+class LincAttachment(val audio: Linc) : Attachment()
+
 
 fun main() {
     val likes = Likes(100)
