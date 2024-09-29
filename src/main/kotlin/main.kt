@@ -1,8 +1,10 @@
+import Audio
+
 data class Likes(val count: Int = 0)
 data class Post(
     val id: Int?, val authorId: Int?, val authorName: String?, val content: String?, val published: Long?,
     val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean,
-    val isPinned: Boolean,
+    val isPinned: Boolean, var attachments: Array<Attachment>
 )
 
 object WallService {
@@ -36,56 +38,53 @@ object WallService {
 }
 
 abstract class Attachment (val type: String)
+var attachments = emptyArray<Attachment>(arrayOf(AudioAttachment(Audio(...)), PhotoAttachment(Photo(...)),
+VideoAttachment(Video(...)), DocAttachment(Doc(...)), LincAttachment(Linc(...))))
 
-
-class Audio
-abstract class AudioAttachment(val audio: Audio) : Attachment("audio"){
-   abstract val id: Int
+abstract class Audio {
+    abstract val id: Int
     abstract val owner_id: Int
     abstract val artist: String
     abstract val title: String
     abstract val duration: Int
 }
+abstract class AudioAttachment(val audio: Audio) : Attachment("audio")
 
-class Photo
-abstract class PhotoAttachment(val photo: Photo) : Attachment("photo"){
+abstract class Photo{
     abstract val id: Int
     abstract val album_id: Int
     abstract val owner_id: Int
     abstract val user_id: Int
     abstract val text: String
-
 }
+abstract class PhotoAttachment(val photo: Photo) : Attachment("photo")
 
-class Video
-abstract class VideoAttachment(val video: Video) : Attachment("video"){
+abstract class Video{
     abstract val id: Int
     abstract val owner_id: Int
     abstract val description: String
     abstract val title: String
     abstract val views: Int
-
 }
+abstract class VideoAttachment(val video: Video) : Attachment("video")
 
-class Doc
-abstract class DocAttachment(val doc: Doc) : Attachment("doc"){
+abstract class Doc{
     abstract val id: Int
     abstract val owner_id: Int
     abstract val title: String
     abstract val size: Int
     abstract val ext: String
-
 }
+abstract class DocAttachment(val doc: Doc) : Attachment("doc")
 
-class Linc
-abstract class LincAttachment(val linc: Linc) : Attachment("linc"){
+abstract class Linc{
     abstract val url: String
     abstract val title: String
     abstract val description: String
     abstract val caption: String
     abstract val preview_page: String
-
-}
+    }
+abstract class LincAttachment(val linc: Linc) : Attachment("linc")
 
 
 fun main() {
