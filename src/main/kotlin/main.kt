@@ -1,4 +1,4 @@
-import Audio
+
 
 data class Likes(val count: Int = 0)
 data class Post(
@@ -38,52 +38,55 @@ object WallService {
 }
 
 abstract class Attachment (val type: String)
-var attachments = emptyArray<Attachment>(arrayOf(AudioAttachment(Audio(TODO())), PhotoAttachment(Photo(TODO())),
-VideoAttachment(Video(TODO())), DocAttachment(Doc(TODO())), LincAttachment(Linc(TODO()))))
+var attachments = emptyArray<Attachment>(arrayOf(AudioAttachment(Audio(1,2,"artist","title",3)),
+    PhotoAttachment(Photo(1,2,3,4, "text")),
+    VideoAttachment(Video(1,2,"description", "title", 3)),
+    DocAttachment(Doc(1,2, "title", 3, "ext")),
+    LincAttachment(Linc("url", "title", "description", "caption", "preview_page"))))
 
-class Audio {
-    val id = 1
-    val owner_id = 2
-    val artist = "artist"
-    val title = "title"
-    val duration = 3
-}
+class Audio (
+    val id: Int,
+    val owner_id: Int,
+    val artist: String,
+    val title: String,
+    val duration: Int,
+)
  class AudioAttachment(val audio: Audio) : Attachment("audio")
 
- class Photo{
-     val id = 1
-     val album_id = 2
-     val owner_id = 3
-     val user_id = 4
-     val text = "text"
-}
+ class Photo(
+     val id: Int,
+     val album_id: Int,
+     val owner_id: Int,
+     val user_id: Int,
+     val text: String
+ )
  class PhotoAttachment(val photo: Photo) : Attachment("photo")
 
- class Video{
-     val id = 1
-     val owner_id = 2
-     val description = "description"
-     val title = "title"
-     val views = 3
-}
+ class Video(
+     val id: Int,
+     val owner_id: Int,
+     val description: String,
+     val title: String,
+     val views: Int,
+ )
  class VideoAttachment(val video: Video) : Attachment("video")
 
- class Doc{
-     val id = 1
-     val owner_id = 2
-     val title = "title"
-     val size = 3
-     val ext = "ext"
-}
+ class Doc(
+     val id: Int,
+     val owner_id: Int,
+     val title: String,
+     val size: Int,
+     val ext: String
+     )
  class DocAttachment(val doc: Doc) : Attachment("doc")
 
- class Linc{
-     val url = "url"
-     val title = "title"
-     val description = "description"
-     val caption = "caption"
-     val preview_page = "preview_page"
-    }
+ class Linc(
+     val url: String,
+     val title: String,
+     val description: String,
+     val caption: String,
+     val preview_page: String
+     )
  class LincAttachment(val linc: Linc) : Attachment("linc")
 
 
