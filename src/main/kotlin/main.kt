@@ -38,53 +38,53 @@ object WallService {
 }
 
 abstract class Attachment (val type: String)
-var attachments = emptyArray<Attachment>(arrayOf(AudioAttachment(Audio(...)), PhotoAttachment(Photo(...)),
-VideoAttachment(Video(...)), DocAttachment(Doc(...)), LincAttachment(Linc(...))))
+var attachments = emptyArray<Attachment>(arrayOf(AudioAttachment(Audio(TODO())), PhotoAttachment(Photo(TODO())),
+VideoAttachment(Video(TODO())), DocAttachment(Doc(TODO())), LincAttachment(Linc(TODO()))))
 
-abstract class Audio {
-    abstract val id: Int
-    abstract val owner_id: Int
-    abstract val artist: String
-    abstract val title: String
-    abstract val duration: Int
+class Audio {
+    val id = 1
+    val owner_id = 2
+    val artist = "artist"
+    val title = "title"
+    val duration = 3
 }
-abstract class AudioAttachment(val audio: Audio) : Attachment("audio")
+ class AudioAttachment(val audio: Audio) : Attachment("audio")
 
-abstract class Photo{
-    abstract val id: Int
-    abstract val album_id: Int
-    abstract val owner_id: Int
-    abstract val user_id: Int
-    abstract val text: String
+ class Photo{
+     val id = 1
+     val album_id = 2
+     val owner_id = 3
+     val user_id = 4
+     val text = "text"
 }
-abstract class PhotoAttachment(val photo: Photo) : Attachment("photo")
+ class PhotoAttachment(val photo: Photo) : Attachment("photo")
 
-abstract class Video{
-    abstract val id: Int
-    abstract val owner_id: Int
-    abstract val description: String
-    abstract val title: String
-    abstract val views: Int
+ class Video{
+     val id = 1
+     val owner_id = 2
+     val description = "description"
+     val title = "title"
+     val views = 3
 }
-abstract class VideoAttachment(val video: Video) : Attachment("video")
+ class VideoAttachment(val video: Video) : Attachment("video")
 
-abstract class Doc{
-    abstract val id: Int
-    abstract val owner_id: Int
-    abstract val title: String
-    abstract val size: Int
-    abstract val ext: String
+ class Doc{
+     val id = 1
+     val owner_id = 2
+     val title = "title"
+     val size = 3
+     val ext = "ext"
 }
-abstract class DocAttachment(val doc: Doc) : Attachment("doc")
+ class DocAttachment(val doc: Doc) : Attachment("doc")
 
-abstract class Linc{
-    abstract val url: String
-    abstract val title: String
-    abstract val description: String
-    abstract val caption: String
-    abstract val preview_page: String
+ class Linc{
+     val url = "url"
+     val title = "title"
+     val description = "description"
+     val caption = "caption"
+     val preview_page = "preview_page"
     }
-abstract class LincAttachment(val linc: Linc) : Attachment("linc")
+ class LincAttachment(val linc: Linc) : Attachment("linc")
 
 
 fun main() {

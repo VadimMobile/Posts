@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="Add Attachment">
+    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="Problems with the array">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
     </list>
@@ -341,7 +341,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727450225208</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Problems with the array">
+      <option name="closed" value="true" />
+      <created>1727615709296</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1727615709296</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -361,7 +369,8 @@
     <MESSAGE value="added Nullable-properties" />
     <MESSAGE value="The problem with the tests" />
     <MESSAGE value="Add Attachment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Attachment" />
+    <MESSAGE value="Problems with the array" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problems with the array" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
