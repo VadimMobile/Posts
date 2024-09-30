@@ -90,11 +90,11 @@ class Audio {
 fun main() {
     val likes = Likes(100)
     WallService.add(Post(1, 3,"name", "content", 254, likes = likes ,
-        true, true, true, true))
+        true, true, true, true, attachments))
     WallService.add(Post(1, 3,"name", "content2", 254, likes = likes ,
-        true, true, true, true))
+        true, true, true, true, attachments))
     WallService.printPosts()
     println(WallService.update(Post(1, 3,"name", "content3", 254, likes = likes ,
-        true, true, true, true)))
+        true, true, true, true, attachments)))
     WallService.printPosts()
 }
