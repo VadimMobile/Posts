@@ -38,11 +38,11 @@ object WallService {
 }
 
 abstract class Attachment (val type: String)
-var attachments = emptyArray<Attachment>(arrayOf(AudioAttachment(Audio(1,2,"artist","title",3)),
+var attachments =arrayOf(AudioAttachment(Audio(1,2,"artist","title",3)),
     PhotoAttachment(Photo(1,2,3,4, "text")),
     VideoAttachment(Video(1,2,"description", "title", 3)),
     DocAttachment(Doc(1,2, "title", 3, "ext")),
-    LincAttachment(Linc("url", "title", "description", "caption", "preview_page"))))
+    LincAttachment(Linc("url", "title", "description", "caption", "preview_page")))
 
 class Audio (
     val id: Int,
