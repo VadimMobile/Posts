@@ -1,5 +1,3 @@
-
-
 data class Likes(val count: Int = 0)
 data class Post(
     val id: Int?, val authorId: Int?, val authorName: String?, val content: String?, val published: Long?,
@@ -36,25 +34,6 @@ object WallService {
         return false
     }
 }
-abstract class Attachment () {
-
-}
-
-class Audio
-class AudioAttachment(val audio: Audio) : Attachment()
-
-class Photo
-class PhotoAttachment(val audio: Photo) : Attachment()
-
-class Video
-class VideoAttachment(val audio: Video) : Attachment()
-
-class Doc
-class DocAttachment(val audio: Doc) : Attachment()
-
-class Linc
-class LincAttachment(val audio: Linc) : Attachment()
-
 
 abstract class Attachment (val type: String)
 var attachments =arrayOf(AudioAttachment(Audio(1,2,"artist","title",3)),
