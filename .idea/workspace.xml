@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="The problem with the array is solved">
+    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="Revision of the code after the merge and removal of the secondary branch">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_09_2024_15_50_[Changes]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_09_2024_15_50__Changes_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,17 +82,17 @@
   ],
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GitHubPullRequestState"><![CDATA[{
-  "prStates": [
+  <component name="GitHubPullRequestState">{
+  &quot;prStates&quot;: [
     {
-      "id": {
-        "id": "PR_kwDOMzk2c858pmvB",
-        "number": 1
+      &quot;id&quot;: {
+        &quot;id&quot;: &quot;PR_kwDOMzk2c858pmvB&quot;,
+        &quot;number&quot;: 1
       },
-      "lastSeen": 1727957084926
+      &quot;lastSeen&quot;: 1727957084926
     }
   ]
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:VadimMobile/Posts.git&quot;,
@@ -114,6 +118,7 @@
     "Gradle.Posts [test].executor": "Run",
     "Gradle.WallServiceTest.add.executor": "Run",
     "Gradle.WallServiceTest.executor": "Run",
+    "Gradle.WallServiceTest.shouldThrow.executor": "Run",
     "Gradle.WallServiceTest.updateFalse.executor": "Run",
     "Gradle.WallServiceTest.updateTrue.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
@@ -122,10 +127,21 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "kotlin.migration.detection.enabled": "false",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "settings.editor.splitter.proportion": "0.3058104"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -141,7 +157,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Gradle.WallServiceTest.shouldThrow">
     <configuration name="WallServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -190,7 +206,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.updateFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WallServiceTest.shouldThrow" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -203,7 +219,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WallServiceTest.updateFalse&quot;" />
+            <option value="&quot;WallServiceTest.shouldThrow&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -247,11 +263,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.WallServiceTest.shouldThrow" />
+        <item itemvalue="Gradle.WallServiceTest.add" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.WallServiceTest" />
         <item itemvalue="Gradle.WallServiceTest.updateTrue" />
-        <item itemvalue="Gradle.WallServiceTest.updateFalse" />
-        <item itemvalue="Gradle.WallServiceTest.add" />
       </list>
     </recent_temporary>
   </component>
@@ -368,7 +384,39 @@
       <option name="project" value="LOCAL" />
       <updated>1727724624327</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Revision of the code after the merger">
+      <option name="closed" value="true" />
+      <created>1727957353195</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1727957353195</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Revision of the code after the merge and removal of the secondary branch">
+      <option name="closed" value="true" />
+      <created>1727957401164</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1727957401164</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Revision of the code after the merge and removal of the secondary branch">
+      <option name="closed" value="true" />
+      <created>1727957467980</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1727957467980</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Revision of the code after the merge and removal of the secondary branch">
+      <option name="closed" value="true" />
+      <created>1727957495808</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1727957495808</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,7 +437,9 @@
     <MESSAGE value="The problem with the tests" />
     <MESSAGE value="Add Attachment" />
     <MESSAGE value="Problems with the array" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problems with the array" />
+    <MESSAGE value="Revision of the code after the merger" />
+    <MESSAGE value="Revision of the code after the merge and removal of the secondary branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revision of the code after the merge and removal of the secondary branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

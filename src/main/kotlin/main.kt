@@ -7,6 +7,27 @@ data class Post(
 
 object WallService {
     private var posts = emptyArray<Post>()
+    private var comments = emptyArray<Comment>()
+
+    fun createComment(postId: Int, comment: Comment): Comment {
+        try {
+            for ((index, post) in posts.withIndex()) {
+                if (posts[index].id == postId) {
+                    comments += comment
+                }
+            }
+
+        }catch (e: RuntimeException){
+            println("Ошибка: PostNotFoundException RuntimeException")
+        }catch (e: Exception){
+            println("Ошибка: PostNotFoundException Exception")
+        }catch (e: Throwable){
+            println("Ошибка: PostNotFoundException Throwable")
+        }
+        return comments.last()
+
+    }
+
     private var postId = 0
 
     fun clear() {
@@ -87,6 +108,7 @@ class Audio (
      )
  class LincAttachment(val linc: Linc) : Attachment("linc")
 
+class Comment (val id: Int?, val from_id: Int?, val date: Int, val text: String)
 
 fun main() {
     val likes = Likes(100)
