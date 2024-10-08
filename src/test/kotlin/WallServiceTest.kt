@@ -41,7 +41,7 @@ class WallServiceTest {
            true, true, true, true, attachments))
        WallService.add(Post(3, 3,"name", "content2", 254, likes = likes ,
            true, true, true, true, attachments))
-       WallService.createComment(2, Comment(1,5,3,"4"))
+       WallService.createComment(4, Comment(1,5,3,"4"))
    }
     @Test
     fun createComment() {
@@ -51,7 +51,7 @@ class WallServiceTest {
             true, true, true, true, attachments))
         WallService.add(Post(3, 3,"name", "content2", 254, likes = likes ,
             true, true, true, true, attachments))
-        val result = WallService.createComment(1,Comment(1,5,3,"4"))
+        val result = WallService.createComment(3,Comment(1,5,3,"4"))
         assertNotEquals(null,result)
     }
 
