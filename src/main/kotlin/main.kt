@@ -8,7 +8,6 @@ data class Post(
 object WallService {
     private var posts = emptyArray<Post>()
     private var comments = emptyArray<Comment>()
-    private var reportComments = emptyArray<ReportComment>()
     private var postId = 0
     fun createComment(postId: Int, comment: Comment): Comment {
             for ((index, post) in posts.withIndex()) {
