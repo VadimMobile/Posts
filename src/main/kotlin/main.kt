@@ -4,6 +4,19 @@ data class Post(
     val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean,
     val isPinned: Boolean, var attachments: Array<Attachment>
 )
+data class Notes <T>(
+    add(val title: String, val text: String, val privacy: Integer, val comment_privacy: Integer,
+    val privacy_view: String, val privacy_comment: String),
+    createComment(val note_id: String, val message: String, val guid: String),
+    delete(val note_id: String),
+    deleteComment(val comment_id: Positive),
+    edit((val title: String, val text: String, val note_id: String),
+    editComment(val comment_id: Positive),
+    get(val note_ids: String, val user_id: Positive, val offset: Positive, val count: Positive, val sort: Positive),
+    getById(val note_id: Positive),
+    getComments(val note_id: Positive),
+    restoreComment(val comment_id: Positive)
+)
 
 object WallService {
     private var posts = emptyArray<Post>()
@@ -100,6 +113,7 @@ class Audio (
 class Comment (val id: Int?, val from_id: Int?, val date: Int, val text: String)
 
 class PostNotFoundException (message: String) : Exception(message)
+
 
 fun main() {
     val likes = Likes(100)
