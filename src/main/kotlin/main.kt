@@ -4,19 +4,19 @@ data class Post(
     val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean,
     val isPinned: Boolean, var attachments: Array<Attachment>
 )
-data class Notes <T>(
-    add(val title: String, val text: String, val privacy: Integer, val comment_privacy: Integer,
-    val privacy_view: String, val privacy_comment: String),
-    createComment(val note_id: String, val message: String, val guid: String),
-    delete(val note_id: String),
-    deleteComment(val comment_id: Positive),
-    edit((val title: String, val text: String, val note_id: String),
-    editComment(val comment_id: Positive),
-    get(val note_ids: String, val user_id: Positive, val offset: Positive, val count: Positive, val sort: Positive),
-    getById(val note_id: Positive),
-    getComments(val note_id: Positive),
-    restoreComment(val comment_id: Positive)
-)
+data class Notes <Positive> (val item: Positive){
+    fun add(title: String, text: String, privacy: Integer, comment_privacy: Integer,
+            privacy_view: String,  privacy_comment: String){}
+    fun createComment(note_id: String, message: String, guid: String){}
+    fun delete(note_id: String){}
+    fun deleteComment(comment_id: Positive){}
+    fun edit(title: String, text: String, note_id: String){}
+    fun editComment(comment_id: Positive){}
+    fun get(note_ids: String, user_id: Positive, offset: Positive, count: Positive, sort: Positive){}
+    fun getById(note_id: Positive){}
+    fun getComments(note_id: Positive){}
+    fun restoreComment(comment_id: Positive){}
+}
 
 object WallService {
     private var posts = emptyArray<Post>()
