@@ -4,19 +4,42 @@ data class Post(
     val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean,
     val isPinned: Boolean, var attachments: Array<Attachment>
 )
-data class Notes <T>(
-    add(val title: String, val text: String, val privacy: Integer, val comment_privacy: Integer,
-    val privacy_view: String, val privacy_comment: String),
-    createComment(val note_id: String, val message: String, val guid: String),
-    delete(val note_id: String),
-    deleteComment(val comment_id: Positive),
-    edit((val title: String, val text: String, val note_id: String),
-    editComment(val comment_id: Positive),
-    get(val note_ids: String, val user_id: Positive, val offset: Positive, val count: Positive, val sort: Positive),
-    getById(val note_id: Positive),
-    getComments(val note_id: Positive),
-    restoreComment(val comment_id: Positive)
-)
+data class Note(val id: Int, var title: String, var text: String)
+data class Comment(val id: Int, val text: String, val noteId: Int, var isDeleted: Boolean = false)
+
+class NotesService(val items: MutableList<Note>) {
+    private var comments = emptyArray<Comment>()
+    fun add(title: String, text: String): Note {var note = Note(1, "title", "text")
+        items += note.copy(+1)
+    return items.last()
+    }
+    fun createComment(noteId: Int, message: String): Comment {for ((id) in items)
+        if (id == noteId)
+        Comment(1,"text", 1,false)
+        return comments.last() }
+    fun delete(noteId: Int): Boolean { if (items.contains(noteId)) {
+        items.remove(noteId)
+        return true
+    } else {
+return false
+        }
+    }
+    fun deleteComment(commentId: Int): Boolean {for((index, post) in comments.withIndex())
+        if (comments[index].id == commentId) {
+            return false
+        }
+
+    fun edit(noteId: Int, title: String, text: String): Note { if (items.contains(noteId)) {
+
+    }
+
+    }
+    fun editComment(commentId: Int, text: String): Comment { /* Ищем комментарий и изменяем его текст */ }
+    fun getAll(): List<Note> = items.toList() // Возвращаем список заметок
+    fun getById(noteId: Int): Note? { /* Ищем заметку по id */ }
+    fun getComments(noteId: Int): List<Comment> { /* Возвращаем список комментариев по id заметки, отфильтровывая удалённые */ }
+    fun restoreComment(commentId: Int): Boolean { /* Восстанавливаем комментарий, меняя isDeleted на false */ }
+}
 
 object WallService {
     private var posts = emptyArray<Post>()
@@ -59,7 +82,7 @@ object WallService {
 }
 
 abstract class Attachment (val type: String)
-var attachments =arrayOf(AudioAttachment(Audio(1,2,"artist","title",3)),
+var attachments = arrayOf(AudioAttachment(Audio(1,2,"artist","title",3)),
     PhotoAttachment(Photo(1,2,3,4, "text")),
     VideoAttachment(Video(1,2,"description", "title", 3)),
     DocAttachment(Doc(1,2, "title", 3, "ext")),
