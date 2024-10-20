@@ -1,0 +1,95 @@
+Index: src/main/kotlin/main.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>data class Likes(val count: Int = 0)\r\ndata class Post(\r\n    val id: Int?, val authorId: Int?, val authorName: String?, val content: String?, val published: Long?,\r\n    val likes: Likes = Likes(), val canPin: Boolean, val canDelete: Boolean, val canEdit: Boolean,\r\n    val isPinned: Boolean, var attachments: Array<Attachment>\r\n)\r\ndata class Note(val id: Int, var title: String, var text: String)\r\ndata class Comment(val id: Int, val text: String, val noteId: Int, var isDeleted: Boolean = false)\r\n\r\nclass NotesService(val items: MutableList<Note>) {\r\n    private var comments = emptyArray<Comment>()\r\n    fun add(title: String, text: String): Note {var note = Note(1, \"title\", \"text\")\r\n        items += note.copy(+1)\r\n    return items.last()\r\n    }\r\n    fun createComment(noteId: Int, message: String): Comment {for ((id) in items)\r\n        if (id == noteId)\r\n        Comment(1,\"text\", 1,false)\r\n        return comments.last() }\r\n    fun delete(noteId: Int): Boolean { if (items.contains(noteId)) {\r\n        items.remove(noteId)\r\n        return true\r\n    } else {\r\nreturn false\r\n        }\r\n    }\r\n    fun deleteComment(commentId: Int): Boolean {for((index, post) in comments.withIndex())\r\n        if (comments[index].id == commentId) {\r\n            return false\r\n        }\r\n\r\n    fun edit(noteId: Int, title: String, text: String): Note { if (items.contains(noteId)) {\r\n\r\n    }\r\n\r\n    }\r\n    fun editComment(commentId: Int, text: String): Comment { /* Ищем комментарий и изменяем его текст */ }\r\n    fun getAll(): List<Note> = items.toList() // Возвращаем список заметок\r\n    fun getById(noteId: Int): Note? { /* Ищем заметку по id */ }\r\n    fun getComments(noteId: Int): List<Comment> { /* Возвращаем список комментариев по id заметки, отфильтровывая удалённые */ }\r\n    fun restoreComment(commentId: Int): Boolean { /* Восстанавливаем комментарий, меняя isDeleted на false */ }\r\n}\r\n\r\nobject WallService {\r\n    private var posts = emptyArray<Post>()\r\n    private var comments = emptyArray<Comment>()\r\n    private var postId = 0\r\n    fun createComment(postId: Int, comment: Comment): Comment {\r\n            for ((index, post) in posts.withIndex()) {\r\n                if (posts[index].id == postId) {\r\n                    comments += comment\r\n                    return comments.last()\r\n                }\r\n            }\r\n        throw PostNotFoundException (\"Пост не найден\")\r\n    }\r\n\r\n    fun clear() {\r\n        posts = emptyArray()\r\n        postId = 0\r\n    }\r\n\r\n    fun add(post: Post): Post {\r\n        posts += post.copy(id = ++postId, likes = post.likes.copy())\r\n        return posts.last()\r\n    }\r\n\r\n    fun printPosts() {\r\n        for (post in posts)\r\n            println(post)\r\n    }\r\n\r\n    fun update(newPost: Post): Boolean {\r\n        for ((index, post) in posts.withIndex()) {\r\n            if (posts[index].id == newPost.id) {\r\n                posts[index] = newPost.copy(likes = post.likes.copy())\r\n                return true\r\n            }\r\n        }\r\n        return false\r\n    }\r\n}\r\n\r\nabstract class Attachment (val type: String)\r\nvar attachments = arrayOf(AudioAttachment(Audio(1,2,\"artist\",\"title\",3)),\r\n    PhotoAttachment(Photo(1,2,3,4, \"text\")),\r\n    VideoAttachment(Video(1,2,\"description\", \"title\", 3)),\r\n    DocAttachment(Doc(1,2, \"title\", 3, \"ext\")),\r\n    LincAttachment(Linc(\"url\", \"title\", \"description\", \"caption\", \"preview_page\")))\r\n\r\nclass Audio (\r\n    val id: Int,\r\n    val owner_id: Int,\r\n    val artist: String,\r\n    val title: String,\r\n    val duration: Int,\r\n)\r\n class AudioAttachment(val audio: Audio) : Attachment(\"audio\")\r\n\r\n class Photo(\r\n     val id: Int,\r\n     val album_id: Int,\r\n     val owner_id: Int,\r\n     val user_id: Int,\r\n     val text: String\r\n )\r\n class PhotoAttachment(val photo: Photo) : Attachment(\"photo\")\r\n\r\n class Video(\r\n     val id: Int,\r\n     val owner_id: Int,\r\n     val description: String,\r\n     val title: String,\r\n     val views: Int,\r\n )\r\n class VideoAttachment(val video: Video) : Attachment(\"video\")\r\n\r\n class Doc(\r\n     val id: Int,\r\n     val owner_id: Int,\r\n     val title: String,\r\n     val size: Int,\r\n     val ext: String\r\n     )\r\n class DocAttachment(val doc: Doc) : Attachment(\"doc\")\r\n\r\n class Linc(\r\n     val url: String,\r\n     val title: String,\r\n     val description: String,\r\n     val caption: String,\r\n     val preview_page: String\r\n     )\r\n class LincAttachment(val linc: Linc) : Attachment(\"linc\")\r\n\r\nclass Comment (val id: Int?, val from_id: Int?, val date: Int, val text: String)\r\n\r\nclass PostNotFoundException (message: String) : Exception(message)\r\n\r\n\r\nfun main() {\r\n    val likes = Likes(100)\r\n    WallService.add(Post(1, 3,\"name\", \"content\", 254, likes = likes ,\r\n        true, true, true, true, attachments))\r\n    WallService.add(Post(1, 3,\"name\", \"content2\", 254, likes = likes ,\r\n        true, true, true, true, attachments))\r\n    WallService.printPosts()\r\n    println(WallService.update(Post(1, 3,\"name\", \"content3\", 254, likes = likes ,\r\n        true, true, true, true, attachments)))\r\n    WallService.printPosts()\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/kotlin/main.kt b/src/main/kotlin/main.kt
+--- a/src/main/kotlin/main.kt	(revision d434afe3309753b321d845d26b5c8506b0436a63)
++++ b/src/main/kotlin/main.kt	(date 1729459591289)
+@@ -9,36 +9,54 @@
+ 
+ class NotesService(val items: MutableList<Note>) {
+     private var comments = emptyArray<Comment>()
+-    fun add(title: String, text: String): Note {var note = Note(1, "title", "text")
++    fun add(title: String, text: String): Note {
++        var note = Note(1, "title", "text")
+         items += note.copy(+1)
+-    return items.last()
++        return items.last()
+     }
+-    fun createComment(noteId: Int, message: String): Comment {for ((id) in items)
+-        if (id == noteId)
+-        Comment(1,"text", 1,false)
+-        return comments.last() }
+-    fun delete(noteId: Int): Boolean { if (items.contains(noteId)) {
+-        items.remove(noteId)
+-        return true
+-    } else {
+-return false
++
++    fun createComment(noteId: Int, message: String): Comment {
++        for ((id) in items)
++            if (id == noteId)
++                Comment(1, "text", 1, false)
++        return comments.last()
++    }
++
++    fun delete(noteId: Int): Boolean {
++        if (items.contains(noteId)) {
++            items.remove(noteId)
++            return true
++        } else {
++            return false
+         }
+     }
+-    fun deleteComment(commentId: Int): Boolean {for((index, post) in comments.withIndex())
+-        if (comments[index].id == commentId) {
+-            return false
+-        }
++
++    fun deleteComment(commentId: Int): Boolean {
++        for ((index, post) in comments.withIndex())
++            if (comments[index].id == commentId) {
++                return false
++            }
+ 
+-    fun edit(noteId: Int, title: String, text: String): Note { if (items.contains(noteId)) {
++        fun edit(noteId: Int, title: String, text: String): Note {
++            if (items.contains(noteId)) {
++
++            }
+ 
+-    }
++        }
+ 
+-    }
+-    fun editComment(commentId: Int, text: String): Comment { /* Ищем комментарий и изменяем его текст */ }
+-    fun getAll(): List<Note> = items.toList() // Возвращаем список заметок
+-    fun getById(noteId: Int): Note? { /* Ищем заметку по id */ }
+-    fun getComments(noteId: Int): List<Comment> { /* Возвращаем список комментариев по id заметки, отфильтровывая удалённые */ }
+-    fun restoreComment(commentId: Int): Boolean { /* Восстанавливаем комментарий, меняя isDeleted на false */ }
++        fun editComment(commentId: Int, text: String): Comment { /* Ищем комментарий и изменяем его текст */
++        }
++
++        fun getAll(): List<Note> = items.toList() // Возвращаем список заметок
++        fun getById(noteId: Int): Note? { /* Ищем заметку по id */
++        }
++
++        fun getComments(noteId: Int): List<Comment> { /* Возвращаем список комментариев по id заметки, отфильтровывая удалённые */
++        }
++
++        fun restoreComment(commentId: Int): Boolean { /* Восстанавливаем комментарий, меняя isDeleted на false */
++        }
++    }
+ }
+ 
+ object WallService {
+@@ -148,4 +166,4 @@
+     println(WallService.update(Post(1, 3,"name", "content3", 254, likes = likes ,
+         true, true, true, true, attachments)))
+     WallService.printPosts()
+-}
+\ No newline at end of file
++}
