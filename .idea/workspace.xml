@@ -461,7 +461,31 @@
       <option name="project" value="LOCAL" />
       <updated>1729344356477</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Problem with Generic">
+      <option name="closed" value="true" />
+      <created>1729459329355</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1729459329355</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Problem with Generic">
+      <option name="closed" value="true" />
+      <created>1729459593915</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1729459593915</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Problem with Generic">
+      <option name="closed" value="true" />
+      <created>1729459669643</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1729459669643</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

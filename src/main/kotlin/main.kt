@@ -9,6 +9,7 @@ data class Comment(val id: Int, val text: String, val noteId: Int, var isDeleted
 
 class NotesService(val items: MutableList<Note>) {
     private var comments = emptyArray<Comment>()
+
     fun add(title: String, text: String): Note {
         var note = Note(1, "title", "text")
         items += note.copy(+1)
@@ -26,39 +27,55 @@ class NotesService(val items: MutableList<Note>) {
         if (items.contains(noteId)) {
             items.remove(noteId)
             return true
-        } else {
-            return false
         }
     }
 
     fun deleteComment(commentId: Int): Boolean {
         for ((index, post) in comments.withIndex())
             if (comments[index].id == commentId) {
-                return false
+                return Comment(1, "text", 1, true)
             }
+    }
 
-        fun edit(noteId: Int, title: String, text: String): Note {
-            if (items.contains(noteId)) {
+    fun edit(noteId: Int, title: String, text: String): Note {
+        var note = Note(1, "title", "text")
+        note = note.copy(1, "title2", "text2")
+        return items.last()
+    }
 
-            }
+    fun editComment(commentId: Int, text: String): Comment {
+        for ((id) in items)
+            if (id == commentId)
+        var comment = Comment(1, "text", 1, false)
+        comment = Comment(1, "text2", 1, false)
+        return comments.last()
+    }
 
-        }
-
-        fun editComment(commentId: Int, text: String): Comment { /* Ищем комментарий и изменяем его текст */
-        }
-
-        fun getAll(): List<Note> = items.toList() // Возвращаем список заметок
-        fun getById(noteId: Int): Note? { /* Ищем заметку по id */
-        }
-
-        fun getComments(noteId: Int): List<Comment> { /* Возвращаем список комментариев по id заметки, отфильтровывая удалённые */
-        }
-
-        fun restoreComment(commentId: Int): Boolean { /* Восстанавливаем комментарий, меняя isDeleted на false */
+    fun getAll(): List<Note> = items.toList()
+    fun getById(noteId: Int): Note? {
+        var note = Note(1, "title", "text")
+        if (note.id == noteId) {
+            return note
+        } else {
+            return null
         }
     }
-}
 
+    fun getComments(noteId: Int): List<Comment> {
+        for ((id) in items)
+            if (id == noteId)
+
+                return listOf(Comment(1, "text", 1, false))
+
+    }
+
+    fun restoreComment(commentId: Int): Boolean {
+        for ((index, post) in comments.withIndex())
+            if (comments[index].id == commentId) {
+                return Comment(1, "text", 1, false)
+            }
+    }
+}
 object WallService {
     private var posts = emptyArray<Post>()
     private var comments = emptyArray<Comment>()
