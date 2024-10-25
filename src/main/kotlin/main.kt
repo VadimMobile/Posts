@@ -5,52 +5,66 @@ data class Post(
     val isPinned: Boolean, var attachments: Array<Attachment>
 )
 data class Note(val id: Int, var title: String, var text: String)
-data class Comment(val id: Int, val text: String, val noteId: Int, var isDeleted: Boolean = false)
+data class CommentWithNotes(val id: Int, val text: String, val noteId: Int, var isDeleted: Boolean = false)
 
 class NotesService(val items: MutableList<Note>) {
-    private var comments = emptyArray<Comment>()
+    private var noteIdCounter = 0
+    private var commentIdCounter = 0
+    private var comments = emptyArray<CommentWithNotes>()
 
     fun add(title: String, text: String): Note {
-        var note = Note(1, "title", "text")
-        items += note.copy(+1)
-        return items.last()
+        val note = Note(++noteIdCounter, title, text)
+        items += note
+        return note
     }
 
-    fun createComment(noteId: Int, message: String): Comment {
-        for ((id) in items)
-            if (id == noteId)
-                Comment(1, "text", 1, false)
-        return comments.last()
-    }
-
-    fun delete(noteId: Int): Boolean {
-        if (items.contains(noteId)) {
-            items.remove(noteId)
-            return true
+    fun createComment(noteId: Int, message: String): CommentWithNotes {
+        if (items.any { it.id == noteId }) {
+            val comment = CommentWithNotes(++commentIdCounter, message, noteId, false)
+            comments += comment
+            return comment
+        } else {
+            throw NoteNotFoundException("Note with ID $noteId not found")
         }
     }
 
+    fun delete(noteId: Int): Boolean {
+        if (items.contains<Any>(noteId)) {
+            items.removeAt(noteId)
+            return true
+        }else{
+    return false
+        }
+    }
+
+
     fun deleteComment(commentId: Int): Boolean {
-        for ((index, post) in comments.withIndex())
-            if (comments[index].id == commentId) {
-                return Comment(1, "text", 1, true)
-            }
+        val comment = comments.find { it.id == commentId }
+        comment?.let {
+            it.isDeleted = true
+            return true
+        }
+        return false
     }
 
-    fun edit(noteId: Int, title: String, text: String): Note {
-        var note = Note(1, "title", "text")
-        note = note.copy(1, "title2", "text2")
-        return items.last()
+    fun edit(noteId: Int, title: String, text: String): Note? {
+        val note = items.find { it.id == noteId }
+        return note?.let {
+            val updatedNote = it.copy(title = title, text = text)
+            items[items.indexOf(note)] = updatedNote
+            updatedNote
+        }
     }
 
-    fun editComment(commentId: Int, text: String): Comment {
-        for ((id) in items)
-            if (id == commentId)
-        var comment = Comment(1, "text", 1, false)
-        comment = Comment(1, "text2", 1, false)
-        return comments.last()
-    }
 
+    fun editComment(commentId: Int, text: String): CommentWithNotes? {
+        val comment = comments.find { it.id == commentId }
+        return comment?.let {
+            val updatedComment = it.copy(text = text)
+            comments[comments.indexOf(comment)] = updatedComment
+            updatedComment
+        }
+    }
     fun getAll(): List<Note> = items.toList()
     fun getById(noteId: Int): Note? {
         var note = Note(1, "title", "text")
@@ -61,26 +75,27 @@ class NotesService(val items: MutableList<Note>) {
         }
     }
 
-    fun getComments(noteId: Int): List<Comment> {
-        for ((id) in items)
-            if (id == noteId)
-
-                return listOf(Comment(1, "text", 1, false))
-
+    fun getComments(noteId: Int): List<CommentWithNotes> {
+        if (items[noteId] in items) {
+            return comments.filter { it.noteId == noteId }
+        }
+        throw NoteNotFoundException("Note with ID $noteId not found")
     }
 
     fun restoreComment(commentId: Int): Boolean {
-        for ((index, post) in comments.withIndex())
-            if (comments[index].id == commentId) {
-                return Comment(1, "text", 1, false)
-            }
+        val comment = comments.find { it.id == commentId }
+        comment?.let {
+            it.isDeleted = false
+            return true
+        }
+        return false
     }
 }
 object WallService {
     private var posts = emptyArray<Post>()
-    private var comments = emptyArray<Comment>()
+    private var comments = emptyArray<CommentWithPosts>()
     private var postId = 0
-    fun createComment(postId: Int, comment: Comment): Comment {
+    fun createComment(postId: Int, comment: CommentWithPosts): CommentWithPosts {
             for ((index, post) in posts.withIndex()) {
                 if (posts[index].id == postId) {
                     comments += comment
@@ -168,10 +183,10 @@ class Audio (
      )
  class LincAttachment(val linc: Linc) : Attachment("linc")
 
-class Comment (val id: Int?, val from_id: Int?, val date: Int, val text: String)
+class CommentWithPosts (val id: Int?, val from_id: Int?, val date: Int, val text: String)
 
 class PostNotFoundException (message: String) : Exception(message)
-
+class NoteNotFoundException (message: String) : Exception(message)
 
 fun main() {
     val likes = Likes(100)
