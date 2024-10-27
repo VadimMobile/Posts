@@ -66,6 +66,7 @@ class NotesService(val items: MutableList<Note>) {
         }
     }
     fun getAll(): List<Note> = items.toList()
+
     fun getById(noteId: Int): Note? {
         var note = Note(1, "title", "text")
         if (note.id == noteId) {
@@ -91,6 +92,7 @@ class NotesService(val items: MutableList<Note>) {
         return false
     }
 }
+
 object WallService {
     private var posts = emptyArray<Post>()
     private var comments = emptyArray<CommentWithPosts>()

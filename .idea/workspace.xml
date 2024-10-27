@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="Problem with Generic">
+    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="class NotesService completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +155,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Gradle.WallServiceTest">
     <configuration name="WallServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -260,10 +261,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.WallServiceTest" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.WallServiceTest.createComment" />
         <item itemvalue="Gradle.WallServiceTest.shouldThrow" />
-        <item itemvalue="Gradle.WallServiceTest" />
         <item itemvalue="Gradle.WallServiceTest.add" />
       </list>
     </recent_temporary>
@@ -493,7 +494,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729516217805</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="class NotesService completed">
+      <option name="closed" value="true" />
+      <created>1729850211390</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1729850211390</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -519,7 +528,8 @@
     <MESSAGE value="Problems with tests" />
     <MESSAGE value="The problems with the tests have been solved" />
     <MESSAGE value="Problem with Generic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problem with Generic" />
+    <MESSAGE value="class NotesService completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="class NotesService completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
