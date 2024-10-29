@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="class NotesService completed">
+    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="Problem with tests">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_10_2024_0_26_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/NotesServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/notesServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,39 +110,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build Posts.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Posts [dependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Posts [test].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WallServiceTest.add.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WallServiceTest.createComment.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WallServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WallServiceTest.shouldThrow.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WallServiceTest.updateFalse.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.WallServiceTest.updateTrue.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;kotlin.migration.detection.enabled&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.3058104&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build Posts.executor": "Run",
+    "Gradle.NotesServiceTest.add.executor": "Run",
+    "Gradle.NotesServiceTest.createComment.executor": "Run",
+    "Gradle.NotesServiceTest.delete.executor": "Run",
+    "Gradle.NotesServiceTest.executor": "Run",
+    "Gradle.NotesServiceTest.shouldThrow.executor": "Run",
+    "Gradle.Posts [dependencies].executor": "Run",
+    "Gradle.Posts [test].executor": "Run",
+    "Gradle.WallServiceTest.add.executor": "Run",
+    "Gradle.WallServiceTest.createComment.executor": "Run",
+    "Gradle.WallServiceTest.executor": "Run",
+    "Gradle.WallServiceTest.shouldThrow.executor": "Run",
+    "Gradle.WallServiceTest.updateFalse.executor": "Run",
+    "Gradle.WallServiceTest.updateTrue.executor": "Run",
+    "Gradle.notesServiceTest.deleteTrue.executor": "Run",
+    "Gradle.notesServiceTest.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "kotlin.migration.detection.enabled": "false",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "settings.editor.splitter.proportion": "0.3058104"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;,
-      &quot;repository&quot;
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -155,8 +163,8 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.WallServiceTest">
-    <configuration name="WallServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.notesServiceTest.deleteTrue">
+    <configuration name="NotesServiceTest.delete" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +177,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WallServiceTest&quot;" />
+            <option value="&quot;NotesServiceTest.delete&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +188,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.add" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NotesServiceTest.shouldThrow" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,7 +201,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WallServiceTest.add&quot;" />
+            <option value="&quot;NotesServiceTest.shouldThrow&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -204,7 +212,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.createComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="notesServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -217,7 +225,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WallServiceTest.createComment&quot;" />
+            <option value="&quot;notesServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,7 +236,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.shouldThrow" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="notesServiceTest.deleteTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -241,7 +249,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WallServiceTest.shouldThrow&quot;" />
+            <option value="&quot;notesServiceTest.deleteTrue&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -261,11 +269,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WallServiceTest" />
+        <item itemvalue="Gradle.notesServiceTest.deleteTrue" />
+        <item itemvalue="Gradle.notesServiceTest" />
         <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Gradle.WallServiceTest.createComment" />
-        <item itemvalue="Gradle.WallServiceTest.shouldThrow" />
-        <item itemvalue="Gradle.WallServiceTest.add" />
+        <item itemvalue="Gradle.NotesServiceTest.delete" />
+        <item itemvalue="Gradle.NotesServiceTest.shouldThrow" />
       </list>
     </recent_temporary>
   </component>
@@ -502,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729850211390</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Problem with tests">
+      <option name="closed" value="true" />
+      <created>1730032204270</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1730032204270</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -529,7 +545,8 @@
     <MESSAGE value="The problems with the tests have been solved" />
     <MESSAGE value="Problem with Generic" />
     <MESSAGE value="class NotesService completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="class NotesService completed" />
+    <MESSAGE value="Problem with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problem with tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
