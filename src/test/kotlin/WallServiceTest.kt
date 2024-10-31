@@ -9,8 +9,8 @@ class WallServiceTest {
         WallService.clear()
     }
     val likes = Likes(100)
-    @Test
 
+    @Test
     fun add() {
         WallService.add(Post(1, 3,"name", "content2", 254, likes = likes ,
             true, true, true, true, attachments))

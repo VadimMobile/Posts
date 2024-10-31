@@ -7,10 +7,15 @@ data class Post(
 data class Note(val id: Int, var title: String, var text: String)
 data class CommentWithNotes(val id: Int, val text: String, val noteId: Int, var isDeleted: Boolean = false)
 
-class notesService(val items: MutableList<Note>) {
+class NotesService(var items: MutableList<Note>) {
     private var noteIdCounter = 0
     private var commentIdCounter = 0
     private var comments = emptyArray<CommentWithNotes>()
+
+    fun clear() {
+        items.clear()
+        commentIdCounter = 0
+    }
 
     fun add(title: String, text: String): Note {
         val note = Note(++noteIdCounter, title, text)
