@@ -12,18 +12,15 @@ class NotesServiceTest {
 
     @Test
     fun add() {
-        NotesService.add("title", "text")
-        val result = Note(1,"title", "text")
-        assertNotEquals(null,result)
+        val result = NotesService.add("title", "text")
+        assertEquals(1,result.id)
     }
 
     @Test
     fun createComment() {
         NotesService.add("title", "text")
-        NotesService.add("title", "text")
-        NotesService.add("title", "text")
         val result = NotesService.createComment(1,"message")
-            assertNotEquals(null, result)
+            assertEquals(1, result.id)
     }
 
     @Test(expected = NoteNotFoundException::class)
@@ -64,7 +61,7 @@ class NotesServiceTest {
     fun edit() {
         NotesService.add("title", "text")
         val result = NotesService.edit(1,"title2", "text2")
-        assertEquals(NotesService.edit(1,"title2", "text2"),result)
+        assertEquals(1, result?.id)
     }
 
     @Test
@@ -72,7 +69,7 @@ class NotesServiceTest {
         NotesService.add("title", "text")
         NotesService.createComment(1,"message")
         val result = NotesService.editComment(1,"text2")
-        assertEquals(NotesService.editComment(1,"text2"), result)
+        assertEquals(1, result?.id)
     }
 
     @Test

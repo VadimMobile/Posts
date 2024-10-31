@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="Problem with tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/NotesServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/NotesServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +47,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="Nullable" />
@@ -197,7 +202,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="NotesServiceTest.deleteFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NotesServiceTest.add" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -210,7 +215,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;NotesServiceTest.deleteFalse&quot;" />
+            <option value="&quot;NotesServiceTest.add&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="NotesServiceTest.createComment" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;NotesServiceTest.createComment&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,7 +274,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="NotesServiceTest.getById" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NotesServiceTest.restoreCommentFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -258,31 +287,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;NotesServiceTest.getById&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="NotesServiceTest.getComments" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;NotesServiceTest.getComments&quot;" />
+            <option value="&quot;NotesServiceTest.restoreCommentFalse&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -296,10 +301,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.NotesServiceTest" />
-        <item itemvalue="Gradle.NotesServiceTest.getComments" />
-        <item itemvalue="Gradle.NotesServiceTest.getById" />
+        <item itemvalue="Gradle.NotesServiceTest.restoreCommentFalse" />
         <item itemvalue="Gradle.NotesServiceTest.editComment" />
-        <item itemvalue="Gradle.NotesServiceTest.deleteFalse" />
+        <item itemvalue="Gradle.NotesServiceTest.createComment" />
+        <item itemvalue="Gradle.NotesServiceTest.add" />
       </list>
     </recent_temporary>
   </component>
@@ -576,7 +581,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730376723651</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Problem with tests">
+      <option name="closed" value="true" />
+      <created>1730380043490</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1730380043490</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
