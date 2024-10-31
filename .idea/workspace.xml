@@ -7,8 +7,6 @@
     <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="Problem with tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/WallServiceTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/notesServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/NotesServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,8 +169,8 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.NotesServiceTest.getComments">
-    <configuration name="NotesServiceTest.deleteCommentFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.NotesServiceTest.deleteFalse">
+    <configuration name="NotesServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -185,7 +183,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;NotesServiceTest.deleteCommentFalse&quot;" />
+            <option value="&quot;NotesServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,7 +194,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="NotesServiceTest.deleteCommentTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NotesServiceTest.deleteFalse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -209,7 +207,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;NotesServiceTest.deleteCommentTrue&quot;" />
+            <option value="&quot;NotesServiceTest.deleteFalse&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -220,7 +218,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="NotesServiceTest.edit" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="NotesServiceTest.deleteTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -233,31 +231,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;NotesServiceTest.edit&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="NotesServiceTest.getAll" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;NotesServiceTest.getAll&quot;" />
+            <option value="&quot;NotesServiceTest.deleteTrue&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -292,13 +266,20 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="Posts.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.NotesServiceTest.deleteFalse" />
+        <item itemvalue="Gradle.NotesServiceTest.deleteTrue" />
+        <item itemvalue="Gradle.NotesServiceTest" />
+        <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.NotesServiceTest.getComments" />
-        <item itemvalue="Gradle.NotesServiceTest.getAll" />
-        <item itemvalue="Gradle.NotesServiceTest.edit" />
-        <item itemvalue="Gradle.NotesServiceTest.deleteCommentFalse" />
-        <item itemvalue="Gradle.NotesServiceTest.deleteCommentTrue" />
       </list>
     </recent_temporary>
   </component>
@@ -551,7 +532,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730212829595</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Problem with tests">
+      <option name="closed" value="true" />
+      <created>1730374917274</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1730374917274</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Problem with tests">
+      <option name="closed" value="true" />
+      <created>1730374948031</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1730374948031</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

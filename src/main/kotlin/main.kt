@@ -15,6 +15,8 @@ class NotesService(var items: MutableList<Note>) {
     fun clear() {
         items.clear()
         commentIdCounter = 0
+        comments = emptyArray()
+        noteIdCounter = 0
     }
 
     fun add(title: String, text: String): Note {
@@ -34,13 +36,11 @@ class NotesService(var items: MutableList<Note>) {
     }
 
     fun delete(noteId: Int): Boolean {
-        if (items.contains<Any>(noteId)) {
-            items.removeAt(noteId)
-            return true
-        }else{
-    return false
+        items.contains<Any>(noteId)
+        items.removeAt(noteId)
+        return true
         }
-    }
+
 
 
     fun deleteComment(commentId: Int): Boolean {
