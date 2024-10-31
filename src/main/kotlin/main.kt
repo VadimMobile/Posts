@@ -36,10 +36,14 @@ class NotesService(var items: MutableList<Note>) {
     }
 
     fun delete(noteId: Int): Boolean {
-        items.contains<Any>(noteId)
-        items.removeAt(noteId)
-        return true
+        for (item in items) {
+            if (item.id == noteId) {
+                items.remove(item)
+                return true
+            }
         }
+        return false
+    }
 
 
 
@@ -73,19 +77,22 @@ class NotesService(var items: MutableList<Note>) {
     fun getAll(): List<Note> = items.toList()
 
     fun getById(noteId: Int): Note? {
-        var note = Note(1, "title", "text")
-        if (note.id == noteId) {
-            return note
-        } else {
-            return null
+        for (item in items) {
+            if (item.id == noteId) {
+                return item
+            }
         }
+        return null
     }
 
     fun getComments(noteId: Int): List<CommentWithNotes> {
-        if (items[noteId] in items) {
-            return comments.filter { it.noteId == noteId }
+        val commentsResult = mutableListOf<CommentWithNotes>()
+        for (comment in comments) {
+            if (comment.noteId == noteId) {
+                commentsResult.add(comment)
+            }
         }
-        throw NoteNotFoundException("Note with ID $noteId not found")
+        return comments.toList()
     }
 
     fun restoreComment(commentId: Int): Boolean {

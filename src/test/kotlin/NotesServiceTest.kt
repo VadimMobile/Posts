@@ -9,6 +9,7 @@ class NotesServiceTest {
         NotesService.clear()
     }
     val NotesService = NotesService(mutableListOf())
+
     @Test
     fun add() {
         NotesService.add("title", "text")
@@ -24,6 +25,7 @@ class NotesServiceTest {
         val result = NotesService.createComment(1,"message")
             assertNotEquals(null, result)
     }
+
     @Test(expected = NoteNotFoundException::class)
     fun shouldThrow() {
             NotesService.add("title", "text")
@@ -37,6 +39,7 @@ class NotesServiceTest {
         NotesService.add("title", "text")
         assertTrue(NotesService.delete(1))
     }
+
     @Test
     fun deleteFalse() {
         NotesService.add("title", "text")
@@ -85,7 +88,7 @@ class NotesServiceTest {
     fun getById() {
         NotesService.add("title", "text")
         val result = NotesService.getById(1)
-       assertEquals(1, result)
+        assertEquals(1, result?.id)
     }
 
     @Test
@@ -93,7 +96,7 @@ class NotesServiceTest {
         NotesService.add("title", "text")
         NotesService.createComment(1,"message")
         val result = NotesService.getComments(1)
-        assertEquals(1, result)
+        assertEquals(1, result.size)
     }
 
     @Test
@@ -103,6 +106,7 @@ class NotesServiceTest {
         NotesService.deleteComment(1)
         assertTrue(NotesService.restoreComment(1))
     }
+
     @Test
     fun restoreCommentFalse() {
         NotesService.add("title", "text")
