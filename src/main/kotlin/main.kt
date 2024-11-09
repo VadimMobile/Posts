@@ -7,6 +7,44 @@ data class Post(
 data class Note(val id: Int, var title: String, var text: String)
 data class CommentWithNotes(val id: Int, val text: String, val noteId: Int, var isDeleted: Boolean = false)
 
+data class Message(val text: String, var read: Boolean = false)
+data class Chat(val messages: MutableList<Message> = mutableListOf())
+
+object ChatService{
+private var chats = mutableMapOf(10 to Chat())
+
+    fun addMessage(userId: Int, message: Message){
+        chats.getOrPut(userId) { Chat() }.messages += message
+    }
+
+    fun getUnreadChatsCount() = chats.values.count { chat -> chat.messages.any { !it.read } }
+
+    fun getLastMessage() = chats.values.map { it.messages.lastOrNull()?.text ?: "No messages"}
+
+    fun getMessage(userId: Int, count: Int): List <Message>{
+        val chat = chats[userId] ?: throw NoSuchChatException()
+        return chat.messages.takeLast(count).onEach { it.read = true }
+    }
+
+    fun deleteMessage(message: Message) {
+        chats.values.forEach { chat -> chat.messages.contains(message) { it.messages.remove(message) } }
+    }
+
+    fun addChat(userId: Int){
+        chats.getOrPut(userId) { Chat() }
+    }
+
+
+    fun deleteChat(userId: Int, chat: Chat){
+        chats.values.forEach { chats.contains(chat) { it.chat.remove(chat) } }
+    }
+
+    fun printChats(){
+        println(chats)
+    }
+}
+class NoSuchChatException : Throwable()
+
 class NotesService(var items: MutableList<Note>) {
     private var noteIdCounter = 0
     private var commentIdCounter = 0
@@ -212,4 +250,15 @@ fun main() {
     println(WallService.update(Post(1, 3,"name", "content3", 254, likes = likes ,
         true, true, true, true, attachments)))
     WallService.printPosts()
+
+    ChatService.addMessage(1,Message("Hello"))
+    ChatService.addMessage(2,Message("Hi"))
+    ChatService.addMessage(2,Message("How are you?"))
+
+    ChatService.printChats()
+    println(ChatService.getUnreadChatsCount())
+println(ChatService.getLastMessage())
+    println(ChatService.getMessage(2,1))
+    ChatService.printChats()
+   // ChatService.deleteMessage(Message())
 }
