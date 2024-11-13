@@ -27,7 +27,7 @@ private var chats = mutableMapOf(10 to Chat())
     }
 
     fun deleteMessage(message: Message) {
-        chats.values.forEach { chat -> chat.messages.contains(message) { it.messages.remove(message) } }
+        chats.values.forEach { chat -> chat.messages.remove(message) }
     }
 
     fun addChat(userId: Int){
@@ -35,9 +35,7 @@ private var chats = mutableMapOf(10 to Chat())
     }
 
 
-    fun deleteChat(userId: Int, chat: Chat){
-        chats.values.forEach { chats.contains(chat) { it.chat.remove(chat) } }
-    }
+    fun deleteChat(userId: Int) = chats.remove(userId)
 
     fun printChats(){
         println(chats)
@@ -260,5 +258,4 @@ fun main() {
 println(ChatService.getLastMessage())
     println(ChatService.getMessage(2,1))
     ChatService.printChats()
-   // ChatService.deleteMessage(Message())
 }
