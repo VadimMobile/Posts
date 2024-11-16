@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="problems with deletion">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" afterDir="false" />
+    <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="problems with tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,7 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.WallServiceTest">
+  <component name="RunManager" selected="Gradle.ChatServiceTest.getLastMessage">
     <configuration name="ChatServiceTest.addChat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -237,7 +236,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceTest.getMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChatServiceTest.getLastMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -250,7 +249,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ChatServiceTest.getMessage&quot;" />
+            <option value="&quot;ChatServiceTest.getLastMessage&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -285,37 +284,20 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest.updateTrue" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;WallServiceTest.updateTrue&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="Posts.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.WallServiceTest" />
-        <item itemvalue="Gradle.WallServiceTest.updateTrue" />
-        <item itemvalue="Gradle.ChatServiceTest.deleteChat" />
+        <item itemvalue="Gradle.ChatServiceTest.getLastMessage" />
         <item itemvalue="Gradle.ChatServiceTest.addChat" />
-        <item itemvalue="Gradle.ChatServiceTest.getMessage" />
+        <item itemvalue="Gradle.ChatServiceTest.deleteChat" />
+        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Gradle.WallServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -624,7 +606,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731155956792</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="problems with tests">
+      <option name="closed" value="true" />
+      <created>1731511462710</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1731511462710</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -653,7 +643,8 @@
     <MESSAGE value="class NotesService completed" />
     <MESSAGE value="Problem with tests" />
     <MESSAGE value="problems with deletion" />
-    <option name="LAST_COMMIT_MESSAGE" value="problems with deletion" />
+    <MESSAGE value="problems with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="problems with tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

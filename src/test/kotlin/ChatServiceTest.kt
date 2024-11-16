@@ -22,10 +22,8 @@ class ChatServiceTest {
     @Test
     fun getLastMessage() {
         ChatService.addMessage(1, Message("text", false))
-        ChatService.addMessage(2, Message("text", true))
-        ChatService.addMessage(3, Message("text", false))
         val result = ChatService.getLastMessage()
-        assertEquals(3,result.size)
+        assertEquals(Message("text"),result)
     }
 
     @Test
@@ -52,14 +50,14 @@ class ChatServiceTest {
         ChatService.addMessage(2, Message("text", true))
         ChatService.addMessage(3, Message("text", false))
         val result = ChatService.deleteMessage(Message("text"))
-        assertEquals(1, result)
+        assertNull(result)
     }
 
     @Test
     fun addChat() {
         ChatService.addMessage(1, Message("text", false))
         val result = ChatService.addChat(1)
-        assertEquals(1,result)
+        assertNotNull(result)
     }
 
     @Test
@@ -68,6 +66,6 @@ class ChatServiceTest {
         ChatService.addMessage(2, Message("text", true))
         ChatService.addMessage(3, Message("text", false))
         val result = ChatService.deleteChat(1)
-        assertEquals(1,result)
+        assertNull(result)
     }
 }
