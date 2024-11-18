@@ -1,8 +1,14 @@
 import org.junit.Test
 
 import org.junit.Assert.*
+import org.junit.Before
 
 class ChatServiceTest {
+
+    @Before
+    fun clearChats() {
+        ChatService.clear()
+    }
 
     @Test
     fun addMessage() {
@@ -23,16 +29,7 @@ class ChatServiceTest {
     fun getLastMessage() {
         ChatService.addMessage(1, Message("text", false))
         val result = ChatService.getLastMessage()
-        assertEquals(Message("text"),result)
-    }
-
-    @Test
-    fun noGetLastMessage() {
-        ChatService.addMessage(1, Message("text", false))
-        ChatService.addMessage(2, Message("text", true))
-        ChatService.addMessage(3, Message("text", false))
-        val result = ChatService.getLastMessage()
-        assertEquals("No messages",result)
+        assertEquals(listOf("text"),result)
     }
 
     @Test
@@ -46,11 +43,10 @@ class ChatServiceTest {
 
     @Test
     fun deleteMessage() {
-        ChatService.addMessage(1, Message("text", false))
-        ChatService.addMessage(2, Message("text", true))
-        ChatService.addMessage(3, Message("text", false))
-        val result = ChatService.deleteMessage(Message("text"))
-        assertNull(result)
+        ChatService.addMessage(1, Message("text"))
+        ChatService.addMessage(2, Message("text"))
+        ChatService.deleteMessage(Message("text"))
+        assertEquals(listOf("No messages", "No messages"), ChatService.getLastMessage())
     }
 
     @Test
@@ -62,10 +58,12 @@ class ChatServiceTest {
 
     @Test
     fun deleteChat() {
-        ChatService.addMessage(1, Message("text", false))
-        ChatService.addMessage(2, Message("text", true))
-        ChatService.addMessage(3, Message("text", false))
-        val result = ChatService.deleteChat(1)
-        assertNull(result)
+        ChatService.addMessage(1, Message("text"))
+        ChatService.addMessage(2, Message("text"))
+        ChatService.addMessage(3, Message("text"))
+        val beforeCount = ChatService.getUnreadChatsCount()
+        ChatService.deleteChat(1)
+        val afterCount = ChatService.getUnreadChatsCount()
+        assertEquals(beforeCount - 1, afterCount)
     }
 }

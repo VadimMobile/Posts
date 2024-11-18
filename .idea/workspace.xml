@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b7e47334-8b55-41b4-9e9b-495fb9466756" name="Changes" comment="problems with tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,65 +116,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build Posts.executor": "Run",
-    "Gradle.ChatServiceTest.addChat.executor": "Run",
-    "Gradle.ChatServiceTest.addMessage.executor": "Run",
-    "Gradle.ChatServiceTest.deleteChat.executor": "Run",
-    "Gradle.ChatServiceTest.deleteMessage.executor": "Run",
-    "Gradle.ChatServiceTest.executor": "Run",
-    "Gradle.ChatServiceTest.getLastMessage.executor": "Run",
-    "Gradle.ChatServiceTest.getMessage.executor": "Run",
-    "Gradle.ChatServiceTest.getUnreadChatsCount.executor": "Run",
-    "Gradle.ChatServiceTest.noGetLastMessage.executor": "Run",
-    "Gradle.NotesServiceTest.add.executor": "Run",
-    "Gradle.NotesServiceTest.createComment.executor": "Run",
-    "Gradle.NotesServiceTest.delete.executor": "Run",
-    "Gradle.NotesServiceTest.deleteCommentFalse.executor": "Run",
-    "Gradle.NotesServiceTest.deleteCommentTrue.executor": "Run",
-    "Gradle.NotesServiceTest.deleteFalse.executor": "Run",
-    "Gradle.NotesServiceTest.deleteTrue.executor": "Run",
-    "Gradle.NotesServiceTest.edit.executor": "Run",
-    "Gradle.NotesServiceTest.editComment.executor": "Run",
-    "Gradle.NotesServiceTest.executor": "Run",
-    "Gradle.NotesServiceTest.getAll.executor": "Run",
-    "Gradle.NotesServiceTest.getById.executor": "Run",
-    "Gradle.NotesServiceTest.getComments.executor": "Run",
-    "Gradle.NotesServiceTest.restoreCommentFalse.executor": "Run",
-    "Gradle.NotesServiceTest.shouldThrow.executor": "Run",
-    "Gradle.Posts [dependencies].executor": "Run",
-    "Gradle.Posts [test].executor": "Run",
-    "Gradle.WallServiceTest.add.executor": "Run",
-    "Gradle.WallServiceTest.createComment.executor": "Run",
-    "Gradle.WallServiceTest.executor": "Run",
-    "Gradle.WallServiceTest.shouldThrow.executor": "Run",
-    "Gradle.WallServiceTest.updateFalse.executor": "Run",
-    "Gradle.WallServiceTest.updateTrue.executor": "Run",
-    "Gradle.notesServiceTest.deleteTrue.executor": "Run",
-    "Gradle.notesServiceTest.executor": "Run",
-    "Kotlin.MainKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "kotlin.migration.detection.enabled": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "inlay.hints",
-    "settings.editor.splitter.proportion": "0.3058104"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build Posts.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.addChat.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.addMessage.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.deleteChat.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.deleteMessage.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.getLastMessage.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.getMessage.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.getUnreadChatsCount.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.noGetLastMessage.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.add.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.createComment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.delete.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.deleteCommentFalse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.deleteCommentTrue.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.deleteFalse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.deleteTrue.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.edit.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.editComment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.getAll.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.getById.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.getComments.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.restoreCommentFalse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NotesServiceTest.shouldThrow.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Posts [dependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Posts [test].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WallServiceTest.add.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WallServiceTest.createComment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WallServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WallServiceTest.shouldThrow.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WallServiceTest.updateFalse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WallServiceTest.updateTrue.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.notesServiceTest.deleteTrue.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.notesServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;kotlin.migration.detection.enabled&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.3058104&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -187,8 +188,8 @@
       <command value="gradle test" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.ChatServiceTest.getLastMessage">
-    <configuration name="ChatServiceTest.addChat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ChatServiceTest">
+    <configuration name="ChatServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -201,7 +202,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ChatServiceTest.addChat&quot;" />
+            <option value="&quot;ChatServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,6 +237,30 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ChatServiceTest.deleteMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ChatServiceTest.deleteMessage&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ChatServiceTest.getLastMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -260,7 +285,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WallServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChatServiceTest.getMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -273,7 +298,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;WallServiceTest&quot;" />
+            <option value="&quot;ChatServiceTest.getMessage&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -284,20 +309,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <module name="Posts.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ChatServiceTest" />
+        <item itemvalue="Gradle.ChatServiceTest.deleteMessage" />
+        <item itemvalue="Gradle.ChatServiceTest.getMessage" />
         <item itemvalue="Gradle.ChatServiceTest.getLastMessage" />
-        <item itemvalue="Gradle.ChatServiceTest.addChat" />
         <item itemvalue="Gradle.ChatServiceTest.deleteChat" />
-        <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Gradle.WallServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -614,7 +632,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731511462710</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="problems with tests">
+      <option name="closed" value="true" />
+      <created>1731753019275</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1731753019275</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

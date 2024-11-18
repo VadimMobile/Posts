@@ -13,6 +13,10 @@ data class Chat(val messages: MutableList<Message> = mutableListOf())
 object ChatService{
 private var chats = mutableMapOf(10 to Chat())
 
+    fun clear() {
+        chats.clear()
+    }
+
     fun addMessage(userId: Int, message: Message){
         chats.getOrPut(userId) { Chat() }.messages += message
     }
